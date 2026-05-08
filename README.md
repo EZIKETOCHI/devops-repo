@@ -4,6 +4,20 @@
 
 ![Architecture Diagram](devops-architecture.png)
 
+# Project Architecture
+
+The deployment workflow follows this structure:
+
+Developer → GitHub → GitHub Actions → Docker Build → AWS ECR → AWS ECS → CloudWatch Logs
+
+Whenever new code is pushed to GitHub, GitHub Actions automatically builds a Docker image, pushes it to AWS ECR, and triggers a new ECS deployment.
+
+AWS ECS then pulls the latest Docker image from ECR and runs the application container.
+
+CloudWatch is used to collect logs and monitor the running container.
+
+---
+
 ## Project Overview
 
 This project demonstrates a complete DevOps workflow for deploying a containerized Node.js application to AWS using modern cloud and automation tools.
@@ -35,28 +49,7 @@ Although the application itself is intentionally simple, the main goal of the pr
 
 ---
 
-# Application Endpoints
 
-| Endpoint | Description |
-|---|---|
-| `/` | Main application endpoint |
-| `/health` | Health check endpoint |
-
----
-
-# Project Architecture
-
-The deployment workflow follows this structure:
-
-Developer → GitHub → GitHub Actions → Docker Build → AWS ECR → AWS ECS → CloudWatch Logs
-
-Whenever new code is pushed to GitHub, GitHub Actions automatically builds a Docker image, pushes it to AWS ECR, and triggers a new ECS deployment.
-
-AWS ECS then pulls the latest Docker image from ECR and runs the application container.
-
-CloudWatch is used to collect logs and monitor the running container.
-
----
 
 # Why These Technologies Were Used
 
