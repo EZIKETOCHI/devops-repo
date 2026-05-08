@@ -1,5 +1,9 @@
 # DevOps AWS ECS Deployment Project
 
+## Architecture Diagram
+
+![Architecture Diagram](devops-architecture.png)
+
 ## Project Overview
 
 This project demonstrates a complete DevOps workflow for deploying a containerized Node.js application to AWS using modern cloud and automation tools.
@@ -276,5 +280,3 @@ This project demonstrates several important DevOps concepts including:
 This project demonstrates a complete modern DevOps deployment workflow using Docker, Terraform, AWS ECS, and GitHub Actions.
 
 The goal of the project was not just to deploy an application, but also to implement automation, cloud infrastructure provisioning, container orchestration, and monitoring practices commonly used in real-world DevOps environments.
-
----
