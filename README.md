@@ -20,8 +20,6 @@ CloudWatch is used to collect logs and monitor the running container.
 
 ## Project Overview
 
-ECS public address: http://3.235.179.25:3000/
-
 This project demonstrates a complete DevOps workflow for deploying a containerized Node.js application to AWS using modern cloud and automation tools.
 
 The application was built with Node.js, containerized using Docker, deployed on AWS ECS, provisioned with Terraform, and automated using GitHub Actions CI/CD.
